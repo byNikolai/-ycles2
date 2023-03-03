@@ -13,13 +13,15 @@ public class Main {
 
     public static void task1 () {
         System.out.println("Задача 1");
-        int savings = 0;
+        int month = 0;
         int i = 0;
-        while(savings < 2_459_000){
-            savings = savings + 15_000;
+        int goal = 2_459_000;
+        int savingsPerMonth = 15_000;
+        while(month < goal){
+            month = month + savingsPerMonth;
             i++;
         }
-        System.out.println("Месяц, " + i + " сумма накоплений равна " + savings + " рублей");
+        System.out.println("Месяц, " + i + " сумма накоплений равна " + month + " рублей");
     }
 
 
@@ -58,11 +60,12 @@ public class Main {
     public static void task4 () {
         System.out.println("Задача 4");
         int total = 15_000;
-        int bankPercent = total * 7 / 100;
+        float bankPercent = 0.07F;
         int months = 0;
-        while (total < 12_000_000){
+        int goal = 12_000_000;
+        while (total < goal){
             System.out.println(total);
-            total = total + bankPercent;
+            total = (int) (total + (total * bankPercent));
             months ++;
         }
         System.out.println(months + " months needed");
@@ -72,10 +75,11 @@ public class Main {
     public static void task5 () {
         System.out.println("Задача 5");
         int total = 15_000;
-        int bankPercent = total * 7 / 100;
+        float bankPercent = 0.07F;
         int months = 0;
-        while (total < 12_000_000) {
-            total = total + bankPercent;
+        int goal = 12_000_000;
+        while (total < goal) {
+            total = (int) (total + (total * bankPercent));
             months++;
             if (months % 6 == 0) {
                 System.out.println(total);
@@ -88,11 +92,11 @@ public class Main {
     public static void task6 () {
         System.out.println("Задача 6");
         int total = 15_000;
-        int bankPercent = total * 7 / 100;
+        float bankPercent = 0.07F;
         int monthsTotal = 9 * 12;
         int months = 0;
         while (months <= monthsTotal) {
-            total = total + bankPercent;
+            total = (int) (total + (total * bankPercent));
             months++;
             if (months % 6 == 0) {
                 System.out.println(total);
